@@ -36,7 +36,5 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           script: |
             chmod 400 ${{ secrets.SERVER_SSH_KEY }}
-            docker image pull bernando/github-action:latest
-            docker container stop github-action
-            docker container rm github-action
-            docker container run -d --name github-action -p 80:80 bernando/github-action
+            whoami
+            mkdir test
