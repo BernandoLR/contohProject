@@ -34,4 +34,8 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT }}
-          script: whoami
+          script: |
+            docker image pull bernando/github-action:latest
+            docker container stop github-action
+            docker container rm github-action
+            docker container run -d --name github-action -p 80:80 bernando/github-action
