@@ -1,1 +1,2 @@
 # contohProject
+hello bernando
