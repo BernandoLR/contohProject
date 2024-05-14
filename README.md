@@ -1,2 +1,2 @@
 # contohProject
-hello bernando
+hello bernando Lumbanraja
